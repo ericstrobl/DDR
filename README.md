@@ -1,11 +1,14 @@
 # Dirac Delta Regression (DDR)
 
-This is an R package implementing DDR, an algorithm for transforming a non-linear regressor to a conditional density estimator. 
+This is an R package implementing DDR, an algorithm that transforms the response variable into a set of approximate Dirac delta functions using kernel density functions. DDR converts a non-linear regressor (e.g., reproducing kernel ridge regression) to a conditional density estimator.
 
 The academic article describing DDR in detail can be found here. Please cite the article if you use any of the code in this repository.
 
 # Installation
 
-Please install the `pracma', 'doParallel', and 'foreach' packages on CRAN. Then 
+Please install the `pracma`, `doParallel`, and `foreach` packages on CRAN. Then 
 
-#
+> install_github("ericstrobl/DDR")
+> library(DDR)
+> DDR(rnorm(1000),rnorm(1000),rnorm(1000))
+> RCoT(rnorm(1000),rnorm(1000),rnorm(1000))
