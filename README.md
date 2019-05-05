@@ -1,6 +1,6 @@
 # Dirac Delta Regression (DDR)
 
-This is an R package implementing DDR, an algorithm that transforms the response variable of regression into a set of asymptotically Dirac delta functions using kernel density functions. This allows the user to convert a non-linear regressor to a conditional density estimator. We use kernel ridge regression with a reproducing Gaussian kernel as the underlying regressor.
+This is an R package implementing DDR, an algorithm that transforms the response variable of regression into a set of asymptotically Dirac delta functions using kernel density functions. This allows the user to convert a non-linear regressor to a conditional density estimator. We use kernel ridge regression with a Gaussian reproducing kernel as the underlying regressor.
 
 The academic article describing DDR in detail can be found here. Please cite the article if you use any of the code in this repository.
 
