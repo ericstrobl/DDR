@@ -6,7 +6,7 @@ The academic article describing DDR in detail can be found here. Please cite the
 
 # Installation
 
-Please install the `pracma`, `doParallel`, and `foreach` packages on CRAN. Then 
+Please install the `pracma`, `doParallel`, and `foreach` packages on CRAN. Then:
 
 > install_github("ericstrobl/DDR")
 
@@ -15,3 +15,5 @@ Please install the `pracma`, `doParallel`, and `foreach` packages on CRAN. Then
 > DDR(rnorm(1000),rnorm(1000),rnorm(1000))
 
 > RCoT(rnorm(1000),rnorm(1000),rnorm(1000))
+
+ The DDR algorithm accepts matrices with rows and columns corresponding to samples and features, respectiely.
