@@ -14,4 +14,4 @@ Please install the `pracma`, `doParallel`, and `foreach` packages on CRAN. Then:
 
 > library(DDR)
 
-> cd_est = DDR(rnorm(100),matrix(rnorm(200),100,2),matrix(rnorm(200),100,2))
+> cd_est = DDR(matrix(rnorm(200),100,2),rnorm(100),matrix(rnorm(200),100,2))
