@@ -8,3 +8,10 @@ The academic article describing DDR in detail can be found [here](https://arxiv.
 
 Please install the `pracma`, `doParallel`, and `foreach` packages on CRAN. Then:
 
+> library(devtools)
+
+> install_github("ericstrobl/DDR")
+
+> library(DDR)
+
+> cd_est = DDR(rnorm(100),matrix(rnorm(200),100,2),matrix(rnorm(200),100,2))
