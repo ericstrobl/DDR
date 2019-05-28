@@ -1,0 +1,11 @@
+Package: DDR
+Type: Package
+Title: Dirac Delta Regression
+Version: 0.1.0
+Author: Eric V. Strobl
+Description: Conditional density estimation with asymptotically Dirac delta distributions and kernel ridge regression
+License: CC BY-NC 4.0
+Encoding: UTF-8
+Depends: pracma, doParallel, foreach
+LazyData: true
+RoxygenNote: 6.0.1
