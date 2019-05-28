@@ -48,7 +48,7 @@ DDR <- function(X_tr,y_tr,X_te){
 
   dens = matrix(NaN,m,ncy)
   densf = dens[(n+1):m,];
-  est = foreach (h=hs,.export= c("CV_KRR_dotX_SQ3_fast"),
+  est = foreach (h=hs,.export= c("CV_KRR_dotX_SQ3_fast", "LOO_KRR_fast"),
                  .packages=c("pracma")) %dopar% {
                    # est = for(h in hs){
                    #   print(h)
