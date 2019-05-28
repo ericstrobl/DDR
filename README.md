@@ -14,6 +14,8 @@ Please install the `pracma`, `doParallel`, and `foreach` packages on CRAN. Then:
 
 > library(DDR)
 
-> numCores <- detectCores()-1; registerDoParallel(numCores)
+> numCores <- detectCores()-1; registerDoParallel(numCores) # set up parallel computing
 
-> cd_est = DDR(matrix(rnorm(200),100,2),rnorm(100),matrix(rnorm(20),10,2))
+> cd_est = DDR(matrix(rnorm(200),100,2),rnorm(100),matrix(rnorm(20),10,2)) # run DDR
+
+> plot(cd_est$y,cd_est$dens[1,],ylim=c(0,max(cd_est$dens[1,])+0.001),type="l") # plot the conditional density estimate of the first test set sample
