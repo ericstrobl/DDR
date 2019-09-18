@@ -38,7 +38,7 @@ DDR <- function(X_tr,y_tr,X_te){
     K = RBF_kernel(dotX,sigmas[s])
     for (l in seq_len(length(lambdas))){
       K_tr = K[1:n,1:n]
-      Hs[[s]][[l]] = chol2inv(chol( K_tr + diag(nrow(K_tr))*lambdas[l])) %*%
+      Hs[[s]][[l]] = chol2inv(chol( K_tr + m*diag(nrow(K_tr))*lambdas[l])) %*%
         K[1:n,1:m];
     }
   }
