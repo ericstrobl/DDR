@@ -6,7 +6,7 @@ The academic article describing DDR in detail can be found [here](https://arxiv.
 
 # Installation
 
-Please install the `FNN`, `doParallel` and `foreach` packages on CRAN. Then:
+Please install the `FNN`, `pracma`, `doParallel` and `foreach` packages on CRAN. Then:
 
 > library(devtools)
 
