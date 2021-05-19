@@ -17,3 +17,5 @@ Please install the `FNN`, `pracma`, `doParallel`, `Rfast` and `foreach` packages
 > cd_est = DDR(matrix(rnorm(400),200,2),rnorm(200),matrix(rnorm(20),10,2)) # run DDR
 
 > plot(cd_est$y,cd_est$dens[1,],type="l") # plot the conditional density estimate of the first test sample
+
+> lines(cd_est$y,dnorm(cd_est$y),col="red") # plot ground truth in red
