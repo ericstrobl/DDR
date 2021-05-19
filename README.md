@@ -14,7 +14,7 @@ Please install the `FNN`, `pracma`, `doParallel`, `Rfast` and `foreach` packages
 
 > numCores <- detectCores()-1; registerDoParallel(numCores) # set up parallel computing
 
-> cd_est = DDR(matrix(rnorm(400),200,2),rnorm(200),matrix(rnorm(20),10,2)) # run DDR on standard Gaussian data
+> cd_est = DDR(matrix(rnorm(400),200,2),rnorm(200),matrix(rnorm(20),10,2)) # run DDR on toy Gaussian data
 
 > plot(cd_est$y,cd_est$dens[1,],type="l") # plot the conditional density estimate of the first test sample
 
