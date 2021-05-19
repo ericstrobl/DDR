@@ -4,7 +4,7 @@ This is an R package implementing DDR, an algorithm that transforms the response
 
 # Installation
 
-Please install the `FNN`, `pracma`, `doParallel` and `foreach` packages on CRAN. Then:
+Please install the `FNN`, `pracma`, `doParallel`, `Rfast` and `foreach` packages on CRAN. Then:
 
 > library(devtools)
 
