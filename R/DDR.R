@@ -53,7 +53,7 @@ DDR <- function(X_tr,y_tr,X_te,lb=-Inf,ub=Inf){
   }
   
   # perform DDR in parallel (Step 1)
-  out=CV_KRR_dotX_SQ3_fast_bound(X,y_tr,Hs,cym,nn_cy,lb,ub)
+  out=CV_KRR_dotX_SQ3_fast(X,y_tr,Hs,cym,nn_cy,lb,ub)
   h_star = out$h_star
   
   # sharpen estimate (Step 3)
