@@ -12,6 +12,8 @@ Please install the `FNN`, `pracma`, `doParallel`, `Rfast` and `foreach` packages
 
 > library(DDR)
 
+# Unbounded Response Variable
+
 > numCores <- detectCores()-1; registerDoParallel(numCores) # set up parallel computing
 
 > cd_est = DDR(matrix(rnorm(400),200,2),rnorm(200),matrix(rnorm(20),10,2)) # run DDR on toy Gaussian data
@@ -19,3 +21,15 @@ Please install the `FNN`, `pracma`, `doParallel`, `Rfast` and `foreach` packages
 > plot(cd_est$y,cd_est$dens[1,],type="l") # plot the conditional density estimate of the first test sample
 
 > lines(cd_est$y,dnorm(cd_est$y),col="red") # plot ground truth in red
+
+# Bounded Response Variable
+
+Recommended if you know that the response variable is bounded on an interval [lb,ub]
+
+> numCores <- detectCores()-1; registerDoParallel(numCores) # set up parallel computing
+
+> cd_est = DDR(matrix(rnorm(400),200,2),rbeta(200,0.5,0.5),matrix(rnorm(20),10,2),lb=0,ub=1) # run DDR on data sampled from a beta distribution (alpha=0.5, beta=0.5)
+
+> plot(cd_est$y,cd_est$dens[1,],type="l") # plot the conditional density estimate of the first test sample
+
+> lines(cd_est$y,dbeta(cd_est$y,0.5,0.5),col="red") # plot ground truth in red
