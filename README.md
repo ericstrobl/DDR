@@ -18,7 +18,7 @@ Please install the `FNN`, `pracma`, `doParallel`, `Rfast` and `foreach` packages
 
 > X = matrix(rnorm(400),200,2); y = X[,1]+rnorm(200); X_te = matrix(rnorm(20),10,2) # generate data
 
-> cd_est = DDR(X,y,X_te,lb=0,ub=1) # run DDR
+> cd_est = DDR(X,y,X_te) # run DDR
 
 > plot(cd_est$y,cd_est$dens[1,],type="l") # plot the conditional density estimate of the first test sample
 
@@ -30,7 +30,7 @@ Recommended if you know that the response variable Y is bounded on an interval [
 
 > X = matrix(rnorm(400),200,2); y = rbeta(200,0.5,0.5); X_te = matrix(rnorm(20),10,2) # generate data with response from a beta distribution (alpha=0.5, beta=0.5)
 
-> cd_est = DDR(X,y,X_te) # run DDR
+> cd_est = DDR(X,y,X_te,lb=0,ub=1) # run DDR
 
 > plot(cd_est$y,cd_est$dens[1,],type="l") # plot the conditional density estimate of the first test sample
 
