@@ -24,9 +24,7 @@ Please install the `FNN`, `pracma`, `doParallel`, `Rfast` and `foreach` packages
 
 # Bounded Response
 
-Recommended if you know that the response variable Y is bounded on an interval [lb,ub]
-
-> numCores <- detectCores()-1; registerDoParallel(numCores) # set up parallel computing
+Recommended if you know that the response variable Y is bounded on an interval [lb,ub].
 
 > cd_est = DDR(matrix(rnorm(400),200,2),rbeta(200,0.5,0.5),matrix(rnorm(20),10,2),lb=0,ub=1) # run DDR on data sampled from a beta distribution (alpha=0.5, beta=0.5)
 
