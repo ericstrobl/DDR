@@ -12,7 +12,7 @@ Please install the `FNN`, `pracma`, `doParallel`, `Rfast` and `foreach` packages
 
 > library(DDR)
 
-# Unbounded Response Variable
+# Unbounded Response
 
 > numCores <- detectCores()-1; registerDoParallel(numCores) # set up parallel computing
 
@@ -22,9 +22,9 @@ Please install the `FNN`, `pracma`, `doParallel`, `Rfast` and `foreach` packages
 
 > lines(cd_est$y,dnorm(cd_est$y),col="red") # plot ground truth in red
 
-# Bounded Response Variable
+# Bounded Response
 
-Recommended if you know that the response variable is bounded on an interval [lb,ub]
+Recommended if you know that the response variable Y is bounded on an interval [lb,ub]
 
 > numCores <- detectCores()-1; registerDoParallel(numCores) # set up parallel computing
 
