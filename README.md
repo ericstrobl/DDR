@@ -2,6 +2,8 @@
 
 This is an R package implementing DDR, an algorithm that esimates conditional density functions by transforming the response variable of regression into a set of asymptotically Dirac delta functions using kernel density functions. This allows the user to convert a non-linear regressor into a conditional density estimator. We use kernel ridge regression as the underlying regressor in this implementation.
 
+The academic article describing CCI in detail can be found [here](https://proceedings.mlr.press/v150/strobl21a). Please cite the article if you use any of the code in this repository.
+
 # Installation
 
 Please install the `FNN`, `pracma`, `doParallel`, `Rfast` and `foreach` packages on CRAN. Then:
