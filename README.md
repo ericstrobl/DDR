@@ -26,6 +26,8 @@ Please install the `FNN`, `pracma`, `doParallel`, `Rfast` and `foreach` packages
 
 > lines(cd_est$y,dnorm(cd_est$y,X_te[1,1]),col="red") # plot ground truth in red
 
+> closeAllConnections() # close parallel computing
+
 # Bounded Response
 
 Recommended if you know that the response variable Y is bounded on an interval [lb,ub]. Default is lb=-Inf and ub=Inf.
